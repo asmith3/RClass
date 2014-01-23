@@ -17,21 +17,21 @@ complete <- function(directory, id = 1:332) {
         
         # create new ID's with leading zeros, matching the file names
         
-          newid <- formatC(id,width=3,flag="0")
+          	newid <- formatC(id,width=3,flag="0")
         
         # read in data via a list of filenames
         
-	        data <- lapply(paste(directory,"/",newid,".csv", sep = ""),read.csv)
+	  	data <- lapply(paste(directory,"/",newid,".csv", sep = ""),read.csv)
 	        
-	      # apply the complete.cases funtion over the list of dataframes  
+	# apply the complete.cases funtion over the list of dataframes  
 	        
-	        good <- lapply(data,complete.cases)
+	  	good <- lapply(data,complete.cases)
 	        
-	      # add up boolean 1's created in previous step to output number of complete cases in each dataframe
+	# add up boolean 1's created in previous step to output number of complete cases in each dataframe
 	      
-	        nobs <- sapply(good,sum)
+	  	nobs <- sapply(good,sum)
 	        
         # create a dataframe with list of ID's and corresponding number of complete observations
         
-	        data.frame(id,nobs)
+		data.frame(id,nobs)
 }	
