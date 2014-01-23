@@ -14,18 +14,18 @@ getmonitor <- function(id, directory, summarize = FALSE) {
                 
         # Create new ID with leading zeros
         
-          newid <- formatC(id,width=3,flag="0")
+                newid <- formatC(id,width=3,flag="0")
           
         # Load data for requested ID
         
-          data <- read.csv(paste(directory,"/",newid,".csv", sep = ""))
+                data <- read.csv(paste(directory,"/",newid,".csv", sep = ""))
         
         # Print summary if requested 
         
-          if (summarize==TRUE) {print(summary(data))}
+                if (summarize==TRUE) {print(summary(data))}
         
         # implicit return of data
         
-          data
+                data
         
 }
