@@ -31,7 +31,7 @@ complete <- function(directory, id = 1:332) {
 	      
 	  	nobs <- sapply(good,sum)
 	        
-        # create a dataframe with list of ID's and corresponding number of complete observations
+        # implicitly return a dataframe with list of ID's and corresponding number of complete observations
         
 		data.frame(id,nobs)
 }	
