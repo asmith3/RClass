@@ -1,4 +1,4 @@
-Computing for Data Analysis
+RClass
 ======
 
 Computing for Data Analysis Coursera Code
